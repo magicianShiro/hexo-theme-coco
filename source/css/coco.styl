@@ -1,0 +1,31 @@
+@import '_variables'
+@import '_extend'
+@import '_unit/mixin'
+@import '_unit/grid'
+
+body
+	background-color: color-background
+
+ul, li
+  list-style: none
+
+a
+  text-decoration: none
+
+*, *::before, *::after
+	box-sizing: border-box
+
+body, html, p, h1, h2, h3, h4, h5, h6, ul, li
+	margin: 0;
+	padding: 0;
+
+.lf
+	float: left;
+
+.rf
+	float: right;
+
+.clearfix
+	@extend $clearfix
+	
+

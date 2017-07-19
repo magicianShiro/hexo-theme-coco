@@ -1,0 +1,85 @@
+prefixes(prop, args)
+  for profix in vendor-prefixes
+    -{profix}-{prop} args
+
+border-radius()
+	prefixes('border-radius', arguments)
+
+box-shadow()
+	prefixes('box-shadow', arguments)
+
+box-sizing()
+	prefixes('box-sizing', arguments)
+
+// 判断居中
+center(top=true, left=true, height=false, width=false)
+  position: absolute
+  if top
+  	top: top
+  	if height
+  		height: height
+  		margin-top: height * -0.5
+  		if left
+	  		left: left
+	  		if width
+	  			width: width
+	  			margin-left: width * -0.5
+	  		else 
+	  			transform: translateX(-50%)
+  	else
+  		if left
+	  		left: left
+	  		if width
+	  			width: width
+	  			margin-left: width * -0.5
+	  		else 
+	  			transform: translate(-50%, -50%)
+	  	else 
+	  		transform: translateY(-50%)
+  else
+  	if left
+  		left: left
+  		if width
+  			width: width
+  			margin-left: width * -0.5
+  		else 
+        transform: translateX(-50%) 
+// 上下左右都居中
+absolute-center(width, height)
+  if width and height
+    center(50%, 50%, width, height)
+  else if width and !height
+    center(50%, 50%, width, false)
+  else if !width and height
+    center(50%, 50%, false, height)
+  else 
+    center(50%, 50%, false, false)
+
+// 左右居中
+absolute-center-col(width, height)
+  if width and height
+    center(false, 50%, width, height)
+  else if width and !height
+    center(false, 50%, width, false)
+  else if !width and height
+    center(false, 50%, false, height)
+  else
+    center(false, 50%, false, false)
+
+// 上下居中
+absolute-center-col(width, height)
+  if width and height
+    center(50%, false, width, height)
+  else if width and !height
+    center(50%, false, width, false)
+  else if !width and height
+    center(50%, false, false, height)
+  else
+    center(false, 50%, false, false)
+// 隐藏文字
+hide-text()
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
+
+
