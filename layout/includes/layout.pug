@@ -18,18 +18,20 @@ html(lang=config.language)
         != css(url)
     link(rel="icon", href= url_for("img/favicon.png"))
   body
-    #menu-outer
-      nav#menu-inner
-        each url, label in theme.menu
-          a(href=url)= label
+    #header-outer
+      nav#header-inner
+        .banner
+        .menu
+          each url, label in theme.menu
+            a(href=url)= label
     #content-outer
       #content-inner
         if body
           div!= body
         else
           block content
-    #bottom-outer
-      #bottom-inner
+    #footer-outer
+      #footer-inner
         span Site construction by
         span= ' ' + config.author + ' '
         span using

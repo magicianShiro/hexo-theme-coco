@@ -45,7 +45,7 @@ center(top=true, left=true, height=false, width=false)
   		else 
         transform: translateX(-50%) 
 // 上下左右都居中
-absolute-center(width, height)
+absolute-center(width=false, height=false)
   if width and height
     center(50%, 50%, width, height)
   else if width and !height
@@ -56,7 +56,7 @@ absolute-center(width, height)
     center(50%, 50%, false, false)
 
 // 左右居中
-absolute-center-col(width, height)
+absolute-center-row(width=false, height=false)
   if width and height
     center(false, 50%, width, height)
   else if width and !height
@@ -67,7 +67,7 @@ absolute-center-col(width, height)
     center(false, 50%, false, false)
 
 // 上下居中
-absolute-center-col(width, height)
+absolute-center-col(width=false, height=false)
   if width and height
     center(50%, false, width, height)
   else if width and !height

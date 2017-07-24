@@ -6,7 +6,7 @@ language: en
 menu:
   Home: /
   About: /about
-  Contact: /contact
+  # Contact: /contact
   Archives: /archives
 
 # Miscelaneous

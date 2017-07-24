@@ -13,15 +13,15 @@ body
 row(_columns=columns)
 	@extend $clearfix
 	display: block
-	width: total-width * (gridsystem-width(_columns) + gutter-wdith) / gridsystem-width(_columns)
-	margin: total-width * (((gutter-width * 0.5) / gridsystem-width(_columns)) * -1)
+	width: total-width * ((gridsystem-width(_columns) + gutter-wdith) / gridsystem-width(_columns))
+	margin: 0 total-width * (((gutter-width * 0.5) / gridsystem-width(_columns)) * -1)
 
 // 响应式的一列
 column(x, _columns=columns)
 	display: inline
 	float: left
-	width: total-width * (((gutter-width + column-width) * _columns) - gutter-width) / gridsystem-width(_columns)
-	margin: total-width * (gutter-width * 0.5) / gridsystem-width(_columns)
+	width: total-width * ((((gutter-width + column-width) * _columns) - gutter-width) / gridsystem-width(_columns))
+	margin: 0 total-width * ((gutter-width * 0.5) / gridsystem-width(_columns))
 
 // 左偏移多少列
 push(offset=1)
