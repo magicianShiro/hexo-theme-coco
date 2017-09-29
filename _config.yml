@@ -4,10 +4,12 @@ language: en
 
 # main menu navigation
 menu:
-  Home: /
-  About: /about
+  首页: /
   # Contact: /contact
-  Archives: /archives
+  分类: /categories
+  标签: /tags
+  归档: /archives
+  关于: /about
 
 # Miscelaneous
 favicon: /favicon.ico

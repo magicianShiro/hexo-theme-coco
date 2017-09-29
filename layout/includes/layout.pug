@@ -19,11 +19,13 @@ html(lang=config.language)
     link(rel="icon", href= url_for("img/favicon.png"))
   body
     #header-outer
-      nav#header-inner
-        .banner
-        .menu
+      #header-inner
+        a#logo.lf
+          i.logo
+          span.site-title= config.title
+        nav#main-nav.lf
           each url, label in theme.menu
-            a(href=url)= label
+            a(href=url, class="main-nav-link")= label
     #content-outer
       #content-inner
         if body
